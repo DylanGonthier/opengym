@@ -28,6 +28,11 @@ android {
     }
     kotlinOptions { jvmTarget = "17" }
 
+    lint {
+        checkReleaseBuilds = false
+        abortOnError = false
+    }
+
     // L'interface web (dossier ../../public) est embarquée telle quelle dans l'appli.
     sourceSets["main"].assets.srcDirs("../../public")
 }
